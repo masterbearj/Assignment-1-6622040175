@@ -50,5 +50,12 @@ def h1(s):
 
 def h3(s):
     # implement this function
+    goal = (1, 2, 3, 4, 5, 6, 7, 8, 0)
     board, _, _ = s
-    return 0
+    res = 0
+    for idx in range(9):
+        if goal[idx]//3 != board[idx]//3:
+            res += 1
+        if goal[idx]%3 != board[idx]%3:
+            res += 1
+    return res
